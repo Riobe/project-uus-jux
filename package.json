@@ -4,6 +4,7 @@
   "description": "A browser-based game made by game dev newbs.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js"
     "test": "test"
   },
   "keywords": [
