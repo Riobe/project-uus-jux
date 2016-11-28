@@ -14,13 +14,18 @@ var log = function(entry) {
     //fs.appendFileSync('/tmp/project-uus-jux.log', new Date().toISOString() + ' - ' + entry + '\n');
 };
 
+app.set('view engine', 'pug');
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
-app.get('/', (req, res) => {
+/*app.get('/', (req, res) => {
     res.writeHead(200);
     res.write(html);
     res.end();
+});*/
+
+app.get('/', (req, res) => {
+  res.render('index', { title: 'Uus Jux', message: 'Project Uus Jux home.' })
 });
 
 app.post('/', (req, res) => {
